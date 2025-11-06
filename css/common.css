@@ -283,7 +283,7 @@ body {
   margin: 0;
 }
 
-.widget-btn {
+.change-color {
   border: none;
   border-radius: 8px;
   padding: 8px 16px;
@@ -300,7 +300,7 @@ body {
   color: #fff;
 }
 
-.widget-btn:hover,
-.widget-btn:focus {
+.change-color:hover,
+.change-color:focus {
   background-color: #6c8cff;
 }

@@ -5,12 +5,18 @@ function getRandomHexColor() {
 }
 
 const bodyEl = document.body;
-const colorVaiueEl = document.querySelector('.color');
+const colorValueEl = document.querySelector('.color');
 const changeColorBtn = document.querySelector('.change-color');
 
-changeColorBtn.addEventListener('click', () => {
-  const randomColor = getRandomHexColor();
+if (!changeColorBtn) {
+  console.error('Кнопку з селектором .change-color не знайдено. Перевір HTML.');
+}
+if (!colorValueEl) {
+  console.error('Елемент .color не знайдено. Перевір HTML.');
+}
 
+changeColorBtn?.addEventListener('click', () => {
+  const randomColor = getRandomHexColor();
   bodyEl.style.backgroundColor = randomColor;
-  colorVaiueEl.textContent = randomColor;
+  colorValueEl.textContent = randomColor;
 });
